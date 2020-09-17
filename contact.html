@@ -3,21 +3,29 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
     <title>Portofoliu</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="bootstrap-4.5.2-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="bootstrap-4.5.2-dist/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="bootstrap-4.5.2-dist/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="bootstrap-4.5.2-dist/css/bootstrap-reboot.css">
+    <link rel="stylesheet" href="bootstrap-4.5.2-dist/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="bootstrap-4.5.2-dist/css/bootstrap.min.css">
+
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light shadow ">
         <div class="container">
-            <a class="navbar-brand font-weight-bolder" href="index.html">IB Portfolio</a>
-            <button class="navbar-toggler" type="button" data-toogle="colapse" data-target="#navbarResponsive" aria-controls="navbarRespinsive" aria-expanded="false" aria-label="Toggle Navigation">
+            <a class="navbar-brand font-weight-bolder" href="index.html">IB Portfolio </a>
+            <button class="  navbar-toggler " type="button" data-toogle="collapse" data-target="navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle Navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="nav navbar-nav ml-auto">
                     <li class="nav-item active">
                         <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                     </li>
@@ -32,8 +40,74 @@
         </div>
     </nav>
     <div class="container">
-        
+        <div class="card border-0 shadow my-5">
+            <div class="card-body p-5">
+                <h1 class="font-weight-light"> Get in touch</h1>
+                <form id="contact-form" method="post" action="contact.php" role="form">
+
+                    <div class="messages"></div>
+
+                    <div class="controls">
+
+                        <div class="row ">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="form_name">Firstname *</label>
+                                    <input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your firstname *" required="required" data-error="Firstname is required.">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="form_lastname">Lastname *</label>
+                                    <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Please enter your lastname *" required="required" data-error="Lastname is required.">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="form_email">Email *</label>
+                                    <input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter your email *" required="required" data-error="Valid email is required.">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="form_message">Message *</label>
+                                    <textarea id="form_message" name="message" class="form-control" placeholder="Message for me *" rows="4" required="required" data-error="Please, leave us a message."></textarea>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <input type="submit" class="btn btn-success btn-send" value="Send message">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p class="text-muted">
+                                    <strong>*</strong> These fields are required. Contact form template by
+                                    <a href="https://bootstrapious.com/p/how-to-build-a-working-bootstrap-contact-form" target="_blank">Bootstrapious</a>.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
     </div>
+    <script src="contact.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
+    <script src="bootstrap-4.5.2-dist/js/bootstrap.bundle.js"></script>
+    <script src="bootstrap-4.5.2-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="bootstrap-4.5.2-dist/js/bootstrap.js"></script>
+    <script src="bootstrap-4.5.2-dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>
